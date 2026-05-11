@@ -1,0 +1,103 @@
+#container-todolist {
+    padding: 2vh;
+}
+
+#container-inputs form{
+    padding-bottom: 2vh;
+    display: flex;
+    gap: 1vw;
+}
+
+#container-inputs form input {
+    height: 4vh;
+    width: 20vw;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+
+#container-inputs form button#add {
+    background-color: green;
+    height: 4vh;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 2vh;
+    border-radius: 5px;
+    width: 7vw;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#container-inputs form button#add:hover {
+    background-color: rgb(4, 93, 4);
+    transform: scale(0.98);
+}
+
+#container-inputs form button#add:active {
+    transform: scale(1.02);
+}
+
+#lista li {
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    padding-left: 38px;
+}
+
+.li-line{
+    text-decoration: line-through;
+    color: #000000a0
+}
+
+.btn-remover {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: rgb(238, 40, 40);
+    color: #FFF;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-remover:hover {
+    background-color: rgb(161, 38, 38);
+    transform: translateY(-50%) scale(0.98);
+}
+
+.btn-prefinish {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 2px solid #787878;
+}
+
+.btn-finish {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: rgb(4, 176, 47);
+    color: #FFF;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.btn-finish::before {
+    content: "✔";
+}

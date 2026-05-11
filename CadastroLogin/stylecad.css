@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+
+/*MAIN*/
+
+body main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 82vh;
+}
+
+body main section#tela {
+    background-color: rgb(29, 20, 78);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+body main section#tela form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+body main section#tela form p#cad {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+body main section#tela form input {
+    width: 300px;
+    height: 40px;
+    background-color: #FFF;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+  -webkit-text-fill-color: black;
+}
+
+body main section#tela form button#conf {
+    width: 200px;
+    height: 35px;
+    background-color: #4d6fb5;
+    color: #e8e8e8;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.2s;
+    margin-top: 5px;
+    cursor: pointer;
+}
+body main section#tela form button#conf:hover {
+    transform: scale(0.98);
+    background-color: #1142a2;
+    color: #FFF;
+}
+body main section#tela form button#conf:active {
+    transform: scale(1.02);
+}
+
+body main section#tela button#showRec{
+    color: rgb(55, 154, 240);
+    text-decoration: underline;
+    align-self: flex-end;
+    transition: 0.2s;
+    font-size: 15px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+body main section#tela button#showRec:hover {
+    color: rgb(5, 111, 160);
+}
+
+/* SHOW AVISOS EMAIL NOME */
+
+body main section#tela form section#avisos {
+    display: none;
+}
+
+body main section#tela form section#avisos p{
+    display: none;
+    background-color: #FFF;
+    font-size: 15px;
+    color: #000;
+    padding: 10px;
+    border: 4px solid red;
+    border-radius: 10px;
+    margin: 0;
+}
+
+body main section#RecSenha form section#avisos-rec {
+    display: none;
+}
+
+body main section#RecSenha form section#avisos-rec p{
+    display: none;
+    background-color: #FFF;
+    font-size: 15px;
+    color: #000;
+    padding: 10px;
+    border: 4px solid red;
+    border-radius: 10px;
+    margin: 0;
+}
+
+/*SHOW PASSWORD ICON*/
+
+#show-password {
+    position: relative;
+}
+
+#btnsenha {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+#btnsenha i {
+    font-size: 20px;
+    color: black;
+}
+
+/*HEAD*/
+body header {
+    display: flex;
+    justify-content: end;
+    height: 60px;
+    align-items: center;
+}
+
+body header a button {
+    background-color: #5541ad;
+    color: #FFF;
+    width: 100px;
+    height: 30px;
+    margin-right: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+body header a button:hover {
+    background-color: rgb(42, 25, 117);
+    transform: scale(0.98);
+}
+
+body header a button:active {
+    transform: scale(1.02);
+}
+
+/*Recuperação de Senha LOGIN */
+body main section#RecSenha {
+    position: fixed;
+    display: none;
+}
+
+body main section#RecSenha form {
+    background-color: rgb(79, 28, 138);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+body main section#RecSenha form p {
+    color: #FFF;
+    font-weight: bold;
+}
+
+body main section#RecSenha form input {
+    height: 30px;
+    width: 350px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+body main section#RecSenha form button#btnRS {
+    height: 35px;
+    width: 200px;
+    border-radius: 5px;
+    color: #FFF;
+    background-color: #8755ec;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+body main section#RecSenha form button#btnRS:hover {
+    background-color: #331d95;
+    transform: scale(0.98);
+}
+
+body main section#RecSenha form button#btnRS:active{
+    transform: scale(1.02);
+}
+
+body main section#RecSenha form button#sairRS {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+body main section#RecSenha form button#sairRS:hover {
+    transform: scale(0.98);
+    background-color: rgb(198, 17, 17);
+}
+
+body main section#RecSenha form button#sairRS:active {
+    transform: scale(1.02);
+}
