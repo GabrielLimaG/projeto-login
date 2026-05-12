@@ -84,7 +84,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 // RECUPERAR SENHA
 if (isset($_POST['recuperar'])) {
-
     $Recnome = $_POST['recNome'];
     $Recemail = $_POST['recEmail'];
 
@@ -94,7 +93,6 @@ if (isset($_POST['recuperar'])) {
     $result = $stmt_sql->get_result();
 
     if ($result->num_rows > 0) {
-
         $usuario = $result->fetch_assoc();
 
         $token = bin2hex(random_bytes(32));
@@ -104,7 +102,6 @@ if (isset($_POST['recuperar'])) {
         $stmt_update = $conn->prepare("UPDATE cadastros SET token = ?, token_expira = ? WHERE id = ?");
         $stmt_update->bind_param("ssi", $token, $expira, $id);
         $stmt_update->execute();
-
         $mail = new PHPMailer(true);
         $mail->CharSet = 'UTF-8';
 
@@ -129,7 +126,6 @@ if (isset($_POST['recuperar'])) {
             Redefinir Senha
             </a><br><br>
             Esse link expira em 15 minutos.";
-
             $mail->send();
             
             header("Location: login.php?erro=sucesso_email");

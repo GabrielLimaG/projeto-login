@@ -24,12 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $erro = "";
 
-    if ($nomeExiste && $emailExiste) {
-            $erro = "nome_email";
-        } elseif ($nomeExiste) {
-            $erro = "nome";
-        } elseif ($emailExiste) {
-            $erro = "email";
+    if ($nomeExiste || $emailExiste) {
+            $erro = "erro-cad";
         } else {
             $stmt_insert = $conn->prepare("INSERT INTO cadastros (nome, email, senha) VALUES (?, ?, ?)");
             $stmt_insert->bind_param("sss", $nome, $email, $senha);
@@ -65,13 +61,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" name="nome" id="idnome" required placeholder="Nome:" minlength="6">
                 <section id="show-password">
                     <input type="password" name="senha" id="idsenha" required placeholder="Senha:" minlength="8" autocomplete="new-password">
-                    <button id="btnsenha" onclick="mostrarSenha()" type="button"><i class="bx bx-hide"></i></button>
+                    <button tabindex="-1" id="btnsenha" onclick="mostrarSenha()" type="button"><i class="bx bx-hide"></i></button>
                 </section>
                 <input type="email" name="email" id="idemail" required placeholder="Email:" autocomplete="off">
                 <section id="avisos">
-                    <p id="aviso-nome-email">Já existe alguém com esse nome e email!</p>
-                    <p id="aviso-nome">Já existe alguém com esse nome!</p>
-                    <p id="aviso-email">Já existe alguém com esse email!</p>
+                    <p id="erro-cadastro">Erro ao Cadastrar!</p>
                 </section>
                 <button type="submit" id="conf" name="cadastrar">Confirmar</button>
             </form>

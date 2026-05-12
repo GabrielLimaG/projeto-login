@@ -55,18 +55,8 @@ function sairRec () {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    if (erroPHP === "nome_email") {
-        document.getElementById("aviso-nome-email").style.display = "block";
-        document.getElementById("avisos").style.display = "block";
-    }
-
-    if (erroPHP === "nome") {
-        document.getElementById("aviso-nome").style.display = "block";
-        document.getElementById("avisos").style.display = "block";
-    }
-
-    if (erroPHP === "email") {
-        document.getElementById("aviso-email").style.display = "block";
+    if (erroPHP === "erro-cad") {
+        document.getElementById("erro-cadastro").style.display = "block";
         document.getElementById("avisos").style.display = "block";
     }
 

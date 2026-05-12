@@ -13,10 +13,25 @@ body header {
     background-color: rgba(53, 118, 153, 0.726);
     height: 10vh;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
-    padding-right: 20px;
+    padding: 0px 20px 0px 20px;
     color: #FFF;
+}
+
+body header #deslogar {
+    background-color: rgb(190, 26, 26);
+    height: 5vh;
+    width: 7vw;
+    color: #FFF;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+body header #deslogar:hover {
+    background-color: rgb(116, 17, 17);
+    transform: scale(1.02);
 }
 
 body main {

@@ -1,12 +1,14 @@
 <?php
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: 0");
+
 include("../Includes/protect.php");
 protect();
 include("scriptTextArea.php");
 include("../Includes/conn.php");
 
-if (isset($_POST['add'])) {
-    
-
+if (isset($_POST['add'])) {    
     header("Location: " . $_SERVER['PHP_SELF']);
     exit;
 }
@@ -27,6 +29,7 @@ if (isset($_POST['add'])) {
 </head>
 <body>
     <header>
+        <a href="/pratica-login/Includes/logout.php"><button id="deslogar">Sair</button></a>
         <h1>Olá <?= htmlspecialchars($_SESSION['nome']); ?></h1>
     </header>
     <main>
