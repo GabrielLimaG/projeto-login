@@ -6,10 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let position = 0;
 
-    // 🔥 desativa animação temporariamente
     banner.classList.add("sem-animacao");
 
-    // recuperar posição
     const savedPosition = localStorage.getItem("bannerPosition");
     if (savedPosition !== null) {
         position = parseInt(savedPosition);
@@ -41,15 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // salva antes do submit
     form.addEventListener("submit", () => {
         localStorage.setItem("bannerPosition", position);
     });
 
-    // aplica posição SEM animação
     update();
 
-    // 🔥 reativa animação depois
     setTimeout(() => {
         banner.classList.remove("sem-animacao");
     }, 50);
